@@ -129,14 +129,17 @@ function App() {
           rows={2}
           placeholder="예: Day -1 ~ Day 2, Day 28 ~ Day 30, Day 56 ~ 58"
         />
-        <div>
-          <input
-            type="checkbox"
-            checked={filterRangeOnly}
-            onChange={e => setFilterRangeOnly(e.target.checked)}
-            id="filterRangeOnly"
-          />
-          <label htmlFor="filterRangeOnly">지정 날짜 범위만 표시</label>
+        <div className="switch-label">
+          <span>지정 날짜 범위만 표시</span>
+          <label className="switch">
+            <input
+              type="checkbox"
+              checked={filterRangeOnly}
+              onChange={e => setFilterRangeOnly(e.target.checked)}
+              id="filterRangeOnly"
+            />
+            <span className="slider"></span>
+          </label>
         </div>
       </div>
       <button className="analyze-btn" onClick={handleAnalyze}>분석하기</button>
